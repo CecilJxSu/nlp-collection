@@ -11,7 +11,7 @@ i n t e * n t i o n
 d s s   i s
 ```
 
-**编辑距离**有多个版本，通常默认的是 **The Levenshtein distance**。
+计算**编辑距离**的消耗成本（或称为权重）有多个版本，最简单的就是 **The Levenshtein distance**。以及编辑距离默认指的就是莱文斯坦距离。
 
 # The Levenshtein distance:
 
