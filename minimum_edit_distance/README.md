@@ -1,6 +1,6 @@
 # Edit distance
 
-**编辑距离**是衡量 2 个字符串的相似程度。测量方式是将 1 个字符串通过有限次数的操作（删除 deletion、插入 insertion、替换 subtitution）变成另外 1 个字符串的过程，并且计算操作消耗的成本。
+**编辑距离** 是衡量 2 个字符串的相似程度。测量方式是将 1 个字符串通过有限次数的操作（删除 deletion、插入 insertion、替换 subtitution）变成另外 1 个字符串的过程，并且计算操作消耗的成本。
 
 例如：intention --> execution
 
@@ -11,11 +11,11 @@ i n t e * n t i o n
 d s s   i s
 ```
 
-计算**编辑距离**的消耗成本（或称为权重）有多个版本，最简单的就是 **The Levenshtein distance**。以及编辑距离默认指的就是莱文斯坦距离。
+计算 **编辑距离** 的消耗成本（或称为权重）有多个版本，最简单的就是 **The Levenshtein distance**。以及编辑距离默认指的就是莱文斯坦距离。
 
 # The Levenshtein distance:
 
-**莱文斯坦距离**也有两个版本，分别是：
+**莱文斯坦距离** 也有两个版本，分别是：
 
 1. d, s, i 操作的成本都为 1。则上面的 distance = 5
 2. 仅允许 d, i 操作，成本分别为 1。虽然不允许 s 操作，但 s 可以看成是 1 个 d 和 1 个 i，因此 s 为 2。所以上面的 distance = 8
@@ -24,7 +24,7 @@ d s s   i s
 
 如何寻找最小的编辑距离？我们可以将此当作是搜索任务，从一个字符串到另一个字符串的所有编辑序列中找出最短的路径。
 
-![figure1](https://ceciljxsu.oss-cn-shenzhen.aliyuncs.com/nlp/minimum_edit_distance_fg1.svg)
+![edit_sequence](https://ceciljxsu.oss-cn-shenzhen.aliyuncs.com/nlp/edit_sequence.svg)
 
 但这样的编辑序列可能会很多，因此不能直接搜索。然而，很多不同的编辑序列都有相同的结束情形（字符串），于是，我们可以依次在有相同结束情形的序列中，找出最短的路径。我们可以使用动态规划的思想，即将原问题拆分为多个容易求解的小问题，然后分别求解小问题，最后求得原问题的解。
 
@@ -41,3 +41,11 @@ D(i,j) 的值可以通过计算 3 条可行的编辑路径的最小值得到，�
 如果使用的是**莱文斯坦距离**版本，即删除和插入消耗 1 个单位的成本，而替换消耗 2 个单位的成本（除了相同字母替换的成本为 0）。因此，计算公式变成：
 
 ![equation2](https://ceciljxsu.oss-cn-shenzhen.aliyuncs.com/nlp/minimum_edit_distance_eq2.svg)
+
+# backtrace
+
+回溯：从右下角的 **8** 开始，跟随箭头往回找出最优的对齐序列（最小编辑路径）。
+
+如果标注颜色的两个单元格并列同一行，则表明进行了插入操作。如果并列同一列，则表明进行了删除操作。
+
+![backtrace](https://ceciljxsu.oss-cn-shenzhen.aliyuncs.com/nlp/backtrace.svg)
