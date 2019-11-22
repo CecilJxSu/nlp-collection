@@ -1,0 +1,41 @@
+\documentclass[dvisvgm,tikz,10pt]{article}
+\usepackage{tikz}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+% 表格单元格对角线：diagbox
+\usepackage{diagbox}
+\usepackage{color, colortbl}
+\definecolor{LightCyan}{rgb}{0.6,0.9,0.99}
+
+\begin{document}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{tabular}{|c|r|r|r|r|r|r|r|r|r|r|}
+  \hline
+  \diagbox{\textbf{Src}}{\textbf{Tar}} & \textbf{\#} & \textbf{e} & \textbf{x} & \textbf{e} & \textbf{c} & \textbf{u} & \textbf{t} & \textbf{i} & \textbf{o} & \textbf{n} \\
+  \hline
+  \textbf{\#} & 0 & $\leftarrow 1$ & $\leftarrow 2$ & $\leftarrow 3$ & $\leftarrow 4$ & $\leftarrow 5$ & $\leftarrow 6$ & $\leftarrow 7$ & $\leftarrow 8$ & $\leftarrow 9$ \\
+  \hline
+  \textbf{i} & \cellcolor{LightCyan}$\uparrow \textbf{\large 1}$ & $\nwarrow\leftarrow\uparrow 2$ & $\nwarrow\leftarrow\uparrow 3$ & $\nwarrow\leftarrow\uparrow 4$ & $\nwarrow\leftarrow\uparrow 5$ & $\nwarrow\leftarrow\uparrow 6$ & $\nwarrow\leftarrow\uparrow 7$ & $\nwarrow 6$ & $\leftarrow 7$ & $\leftarrow 8$ \\
+  \hline
+  \textbf{n} & $\uparrow 2$ & \cellcolor{LightCyan}$\nwarrow\leftarrow\uparrow \textbf{\large 3}$ & $\nwarrow\leftarrow\uparrow 4$ & $\nwarrow\leftarrow\uparrow 5$ & $\nwarrow\leftarrow\uparrow 6$ & $\nwarrow\leftarrow\uparrow 7$ & $\nwarrow\leftarrow\uparrow 8$ & $\uparrow 7$ & $\nwarrow\leftarrow\uparrow 8$ & $\nwarrow 7$ \\
+  \hline
+  \textbf{t} & $\uparrow 3$ & $\nwarrow\leftarrow\uparrow 4$ & \cellcolor{LightCyan}$\nwarrow\leftarrow\uparrow \textbf{\large 5}$ & $\nwarrow\leftarrow\uparrow 6$ & $\nwarrow\leftarrow\uparrow 7$ & $\nwarrow\leftarrow\uparrow 8$ & $\nwarrow 7$ & $\leftarrow\uparrow 8$ & $\nwarrow\leftarrow\uparrow 9$ & $\uparrow 8$ \\
+  \hline
+  \textbf{e} & $\uparrow 4$ & $\nwarrow 3$ & $\leftarrow 4$ & \cellcolor{LightCyan}$\nwarrow\leftarrow \textbf{\large 5}$ & \cellcolor{LightCyan}$\leftarrow \textbf{\large 6}$ & $\leftarrow 7$ & $\leftarrow\uparrow 8$ & $\nwarrow\leftarrow\uparrow 9$ & $\nwarrow\leftarrow\uparrow 10$ & $\uparrow 9$ \\
+  \hline
+  \textbf{n} & $\uparrow 5$ & $\uparrow 4$ & $\nwarrow\leftarrow\uparrow 5$ & $\nwarrow\leftarrow\uparrow 6$ & $\nwarrow\leftarrow\uparrow 7$ & \cellcolor{LightCyan}$\nwarrow\leftarrow\uparrow \textbf{\large 8}$ & $\nwarrow\leftarrow\uparrow 9$ & $\nwarrow\leftarrow\uparrow 10$ & $\nwarrow\leftarrow\uparrow 11$ & $\nwarrow\leftarrow 10$ \\
+  \hline
+  \textbf{t} & $\uparrow 6$ & $\uparrow 5$ & $\nwarrow\leftarrow\uparrow 6$ & $\nwarrow\leftarrow\uparrow 7$ & $\nwarrow\leftarrow\uparrow 8$ & $\nwarrow\leftarrow\uparrow 9$ & \cellcolor{LightCyan}$\nwarrow \textbf{\large 8}$ & $\leftarrow 9$ & $\leftarrow 10$ & $\leftarrow\uparrow 11$ \\
+  \hline
+  \textbf{i} & $\uparrow 7$ & $\uparrow 6$ & $\nwarrow\leftarrow\uparrow 7$ & $\nwarrow\leftarrow\uparrow 8$ & $\nwarrow\leftarrow\uparrow 9$ & $\nwarrow\leftarrow\uparrow 10$ & $\uparrow  9$ & \cellcolor{LightCyan}$\nwarrow \textbf{\large 8}$ & $\leftarrow 9$ & $\leftarrow 10$ \\
+  \hline
+  \textbf{o} & $\uparrow 8$ & $\uparrow 7$ & $\nwarrow\leftarrow\uparrow 8$ & $\nwarrow\leftarrow\uparrow 9$ & $\nwarrow\leftarrow\uparrow 10$ & $\nwarrow\leftarrow\uparrow 11$ & $\uparrow 10$ & $\uparrow 9$ & \cellcolor{LightCyan}$\uparrow \textbf{\large 8}$ & $\leftarrow 9$ \\
+  \hline
+  \textbf{n} & $\uparrow 9$ & $\uparrow 8$ & $\nwarrow\leftarrow\uparrow 9$ & $\nwarrow\leftarrow\uparrow 10$ & $\nwarrow\leftarrow\uparrow 11$ & $\nwarrow\leftarrow\uparrow 12$ & $\uparrow 11$ & $\uparrow 10$ & $\uparrow 9$ & \cellcolor{LightCyan}$\nwarrow \textbf{\large 8}$ \\
+  \hline
+\end{tabular}
+\egroup
+
+\end{document}
