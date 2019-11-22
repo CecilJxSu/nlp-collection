@@ -14,4 +14,5 @@ figure 目录下存放的是图片的 tex 源码，可编译成 svg 图片。
 2. 编译 dvi 文件，得到 svg 文件：dvisvgm --no-fonts \<filename>.dvi。
 
 # 目录简介
-1. minimum_edit_distance: [最小编辑距离算法](./minimum_edit_distance/)
+1. [minimum_edit_distance](./minimum_edit_distance/)
+2. [byte_pair_encoding](./byte_pair_encoding)

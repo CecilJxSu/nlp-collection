@@ -38,7 +38,7 @@ D(i,j) 的值可以通过计算 3 条可行的编辑路径的最小值得到，�
 
 ![equation1](https://ceciljxsu.oss-cn-shenzhen.aliyuncs.com/nlp/minimum_edit_distance_eq1.svg)
 
-如果使用的是**莱文斯坦距离**版本，即删除和插入消耗 1 个单位的成本，而替换消耗 2 个单位的成本（除了相同字母替换的成本为 0）。因此，计算公式变成：
+如果使用的是 **莱文斯坦距离** 版本，即删除和插入消耗 1 个单位的成本，而替换消耗 2 个单位的成本（除了相同字母替换的成本为 0）。因此，计算公式变成：
 
 ![equation2](https://ceciljxsu.oss-cn-shenzhen.aliyuncs.com/nlp/minimum_edit_distance_eq2.svg)
 
