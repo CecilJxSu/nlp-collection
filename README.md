@@ -13,6 +13,7 @@ figure 目录下存放的是图片的 tex 源码，可编译成 svg 图片。
 1. 编译 tex 文件，得到 dvi 文件：latex \<filename>.tex。
 2. 编译 dvi 文件，得到 svg 文件：dvisvgm --no-fonts \<filename>.dvi。
 
-# 目录简介
+# 列表
 1. [minimum_edit_distance](./minimum_edit_distance/)
 2. [byte_pair_encoding](./byte_pair_encoding)
+3. [max_match](./max_match)
